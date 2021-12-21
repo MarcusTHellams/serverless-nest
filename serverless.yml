@@ -5,6 +5,7 @@ app: serverless-nest
 plugins:
   - serverless-offline
   - serverless-plugin-scripts
+  
 
 package:
   excludeDevDependencies: true
