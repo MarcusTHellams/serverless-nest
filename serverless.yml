@@ -1,5 +1,6 @@
 service:
   name: serverless-nest
+app: serverless-nest
 
 plugins:
   - serverless-offline
