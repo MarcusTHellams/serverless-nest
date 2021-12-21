@@ -1,0 +1,17 @@
+{
+	"name": "serverless-nest",
+	"version": "0.0.1",
+	"main": "index.js",
+	"author": "Marcus Hellams",
+	"license": "MIT",
+	"dependencies": {
+		"@types/aws-lambda": "^8.10.88",
+		"@vendia/serverless-express": "^4.5.2",
+		"aws-lambda": "^1.0.7",
+		"serverless-offline": "^8.3.1",
+		"serverless-plugin-scripts": "^1.0.2"
+	},
+	"scripts": {
+		"postinstall": "cd api && yarn && cd ../client && yarn"
+	}
+}
