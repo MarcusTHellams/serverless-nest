@@ -7,12 +7,15 @@ phases:
     commands:
       - echo Installing Serverless...
       - yarn global add serverless
-  build:
+  pre_build:
     commands:
       - yarn
       - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
       - cd ../
-  post_build:
+  build:
     commands:
       - echo Deploying with Serverless Framework
       - sls deploy -v -s $ENV_NAME
+  post_build:
+    commands:
+      - echo Deployment completed on `date`
