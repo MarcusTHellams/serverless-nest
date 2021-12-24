@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing Serverless...
+      - yarn global add serverless
+  build:
+    commands:
+      - pwd
+      - ROOT=${pwd}
+      - cd $ROOT/api && yarn && yarn build
+      - cd $ROOT/client && yarn && yarn build
+      - cd $ROOT && yarn
+  post_build:
+    commands:
+      - echo Deploying with Serverless Framework
+      - sls deploy -v -s $ENV_NAME
