@@ -9,11 +9,8 @@ phases:
       - yarn global add serverless
   build:
     commands:
-      - pwd
-      - ROOT=${pwd}
-      - cd $ROOT/api && yarn && yarn build
-      - cd $ROOT/client && yarn && yarn build
-      - cd $ROOT && yarn
+      - yarn
+      - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
   post_build:
     commands:
       - echo Deploying with Serverless Framework
