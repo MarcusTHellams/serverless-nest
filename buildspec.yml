@@ -11,6 +11,7 @@ phases:
     commands:
       - yarn
       - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
+      - cd ../
   post_build:
     commands:
       - echo Deploying with Serverless Framework
