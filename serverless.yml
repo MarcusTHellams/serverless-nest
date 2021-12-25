@@ -3,7 +3,6 @@ service:
 app: serverless-nest
 
 package:
-  excludeDevDependencies: false
   exclude:
   - client/**
 
