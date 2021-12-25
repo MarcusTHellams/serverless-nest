@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - yarn
-      - cd api/ && yarn && yarn build
+      - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
       - cd ../
   build:
     commands:

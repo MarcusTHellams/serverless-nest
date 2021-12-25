@@ -2,10 +2,6 @@ service:
   name: serverless-nest
 app: serverless-nest
 
-package:
-  exclude:
-  - client/**
-
 plugins:
   - serverless-offline
 
