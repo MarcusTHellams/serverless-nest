@@ -10,8 +10,6 @@ phases:
   pre_build:
     commands:
       - yarn
-      - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
-      - cd ../
   build:
     commands:
       - echo Deploying with Serverless Framework
@@ -19,3 +17,5 @@ phases:
   post_build:
     commands:
       - echo Deployment completed on `date`
+      - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
+      -  cd ../
