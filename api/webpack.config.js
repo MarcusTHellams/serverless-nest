@@ -8,7 +8,7 @@ module.exports = (options, webpack) => {
     ...options,
     externals: [],
     output: {
-      ...output.options,
+      ...options.output,
       libraryTarget: 'commonjs2',
     },
     plugins: [
