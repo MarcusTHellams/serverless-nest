@@ -7,10 +7,19 @@ phases:
     commands:
       - echo Installing Serverless...
       - yarn global add serverless
+      - yarn global add rimraf
   pre_build:
     commands:
       - yarn
-      - cd api/ && yarn && yarn build && cd ../client && yarn && yarn build
+      - cd api/ && yarn && yarn build
+      - rimraf node_modules
+      - rimraf src
+      - rimraf test
+      - cd ../client && yarn && yarn build
+      - rimraf src
+      - rimraf public
+      - rimraf node_modules
+      - rimraf test
       - cd ../
   build:
     commands:
